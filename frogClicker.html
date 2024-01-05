@@ -3,16 +3,33 @@
   <head>
     <style>
       body {
-        background-color: #4190ba;
-        width: 95%;
-        margin-left: 15%;
+        background-image: url("bg0.PNG");
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
         align-tracks: center;
         color: #192a51;
       
       }
-      button {
-        background-color: transparent;
-        border: none;
+      #messButton {
+        background-color: #192a51;
+        border: #c1f5ff;
+        color: #c1f5ff;
+      }
+      .message {
+        margin-top: 10%;
+        background-color: #4190ba;
+        color: #192a51;
+        text-align: center;
+      }
+      #txt1{
+        font-size: 100px;
+      }
+      #txt2{
+        font-size: 50px;
+      }
+      #txt3{
+        font-size: 40px;
       }
       main {
         position: relative;
@@ -22,8 +39,12 @@
         position: absolute;
         top: 40%;
         left: 40%;
+        
       }
-
+      #frogButton {
+        background-color: transparent;
+        border: none;
+      }
       .transform {
         animation: bounce;
         animation-duration: 0.5s;
@@ -33,7 +54,9 @@
           transform: translateY(0px);
         }
         50% {
+          
           transform: translateY(-75px);
+          filter: drop-shadow(0px 0px 50px #c1f5ff);
         }
         100% {
           transform: translateY(0px);
@@ -45,10 +68,15 @@
     <title>Frog Clicker</title>
   </head>
   <body>
-    <div class="main">
-      <img src="bg0.PNG" id="background" width="1650" alt="">
-      <div class="frog transform" id="frog"><button onclick="changeBG()"><img src="frog.PNG" width="500"></button></div>
+    <div class="main" id="main" style="display: none">
+      <img src="bg0.PNG" id="background" width="80%" alt="">
+      <div class="frog transform" id="frog"><button onclick="changeBG()" id="frogButton"><img class="frogImg" src="frog.PNG" width="500"></button></div>
     </div>
-    <p id="tracker">Hello</p>
+    <div class="message" id="message" style="display: block">
+      <p id="txt1">Hi Sharon!!!</p>
+      <p id="txt2">Merry late christmas or happy holidays!<br>I was so excited to pull you for secret santa!</p>
+      <p id="txt3">I made you a cute, short cookie clicker inspired game based on your iconic frog art.<br>Click the frog up to 150 times to add more stuff to its little world.<br>I hope you like it <3</p>
+      <button onclick="changeScreen()" id="messButton">Click here to start clicking!</button>
+    </div>
   </body>
 </html>
