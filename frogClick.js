@@ -17,7 +17,6 @@ function changeBG(){
         frog.src("frogHappy.PNG");
     }
     document.getElementById("background").src = `bg${imgNum}.PNG`;
-    document.getElementById("tracker").innerHTML = "num "+clickNum;
 }
 
 function changeScreen(){
