@@ -4,24 +4,30 @@
     <style>
       body {
         background-image: url("bg0.PNG");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
-        align-tracks: center;
         color: #192a51;
       }
       #messButton {
-        background-color: #192a51;
-        border: #c1f5ff;
+        background-color: #4190ba;
         color: #c1f5ff;
         font-size: 40px;
         margin: 2%;
         border: #192a51;
-        border-width: 2px;
+        border-width: 15px;
+        border-radius: 5px;
+      }
+      #box{
+        background-color: #4190ba;
+        margin: 5%;
       }
       #message {
         margin-top: 10%;
-        background-color: #4190ba;
+        background-color: transparent;
         color: #192a51;
         text-align: center;
       }
@@ -30,9 +36,11 @@
       }
       #txt2{
         font-size: 50px;
+        background-color: #4190ba;
       }
       #txt3{
         font-size: 40px;
+        background-color: #4190ba;
       }
       #main {
         position: relative;
@@ -72,8 +80,11 @@
   <body>
     <div id="message" style="display: block">
       <p id="txt1">Hi Sharon!!!</p>
-      <p id="txt2">Merry (late) Christmas or Happy holidays!<br>I was so excited to pick you for secret santa!!!</p>
-      <p id="txt3">I made you a cute quick game based on your iconic frog art!<br> Its based on cookie clicker, so the more you click the cute frog the more things will show up in the background!<br>I hope you like this little game and I'm excited to see you again this year!</p>
+      <div id="box">
+        <p id="txt2"><br>Merry (late) Christmas or Happy holidays!<br>I was so excited to get you for secret santa!!!</p>
+        <p id="txt3">I made you a cute quick game based on your iconic frog art!<br> Its based on cookie clicker, so the more you click the cute frog the more things will show up in the background!<br>I hope you like this little game and I'm excited to see you again this year!<br></p>
+        <img src="frogHappy.PNG" width="300px">
+      </div>
       <button id="messButton" onclick="changeScreen()">Click to start the game</button>
     </div>
     <div id="main" style="display: none">
