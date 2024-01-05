@@ -9,12 +9,12 @@ function changeBG(){
     frog.offsetTop = frog.offsetTop;
     frog.classList.add("transform");
     //change background
-    if(clickNum == 1 || clickNum == 3 || clickNum == 6 || clickNum == 10 || clickNum == 15 || clickNum == 20 || clickNum == 30 || clickNum == 45 || clickNum == 60 || clickNum == 70){
+    if(clickNum == 1 || clickNum == 3 || clickNum == 6 || clickNum == 10 || clickNum == 15 || clickNum == 20 || clickNum == 30 || clickNum == 40 || clickNum == 50 || clickNum == 60){
         imgNum++;
-    } else if (clickNum == 85){
-        frog.src("frogHeart.PNG");
-    } else if (clickNum == 100){
-        frog.src("frogHappy.PNG");
+    } else if (clickNum == 70){
+        document.getElementById("frogImg").src("frogHeart.PNG");
+    } else if (clickNum == 75){
+        document.getElementById("frogImg").src("frogHappy.PNG");
     }
     document.getElementById("background").src = `bg${imgNum}.PNG`;
 }
