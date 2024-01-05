@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #4190ba;
+        width: 95%;
+        margin-left: 15%;
+        align-tracks: center;
+        color: #192a51;
+      
+      }
+      button {
+        background-color: transparent;
+        border: none;
+      }
+      main {
+        position: relative;
+        top: 0px;
+      }
+      .frog{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
+
+      .transform {
+        animation: bounce;
+        animation-duration: 0.5s;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-75px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+    </style>
+    <script src="frogClick.js"></script>
+    <title>Frog Clicker</title>
+  </head>
+  <body>
+    <div class="main">
+      <img src="bg0.PNG" id="background" width="1650" alt="">
+      <div class="frog transform" id="frog"><button onclick="changeBG()"><img src="frog.PNG" width="500"></button></div>
+    </div>
+    <p id="tracker">Hello</p>
+  </body>
+</html>
